@@ -2,6 +2,8 @@
 
 A sleek, responsive e-commerce web application built with React and Tailwind CSS.
 
+Live Url - [https://shoppy-ecommerce-henna.vercel.app/](https://shoppy-ecommerce-henna.vercel.app/)
+
 ![Shoppy App](./src/assets/image1.png)
 ![Shoppy App](./src/assets/image2.png)
 ![Shoppy App](./src/assets/image3.png)
