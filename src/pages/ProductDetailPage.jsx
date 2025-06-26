@@ -236,7 +236,7 @@ function ProductDetailPage() {
             {product.description}
           </p>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-col items-start space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4">
             <div className="flex items-center">
               <label
                 htmlFor="quantity"
@@ -322,7 +322,7 @@ function ProductDetailPage() {
 
       <div className="mt-20">
         <div className="bg-white rounded-2xl border border-slate-200/50 p-8">
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex flex-col items-start mb-4 space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4 ">
             <h2 className="text-2xl font-bold text-slate-900">
               Customer Reviews
             </h2>
@@ -335,7 +335,7 @@ function ProductDetailPage() {
             <div className="bg-slate-50 rounded-xl p-6">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <div className="flex items-center mb-2">
+                  <div className="flex flex-col items-start space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4">
                     <div className="flex text-amber-400 mr-3">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <svg
@@ -387,7 +387,7 @@ function ProductDetailPage() {
             <div className="bg-slate-50 rounded-xl p-6">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <div className="flex items-center mb-2">
+                  <div className="flex flex-col items-start space-y-4 md:flex-row md:items-center md:space-y-0 md:space-x-4">
                     <div className="flex text-amber-400 mr-3">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <svg

@@ -74,7 +74,7 @@ function CartPage() {
               key={item.id}
               className="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/50 hover:shadow-lg transition-all duration-200"
             >
-              <div className="flex items-start space-x-4">
+              <div className="flex flex-col sm:flex-row items-start space-x-4">
                 <div className="flex-shrink-0 w-24 h-24 bg-slate-50 rounded-xl overflow-hidden">
                   <img
                     src={item.image}
@@ -121,8 +121,8 @@ function CartPage() {
                     </button>
                   </div>
 
-                  <div className="flex items-center justify-between mt-4">
-                    <div className="flex items-center bg-slate-100 rounded-xl p-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-4 gap-3">
+                    <div className="flex items-center bg-slate-100 rounded-xl p-1 self-center sm:self-auto">
                       <button
                         onClick={() =>
                           handleQuantityChange(item.id, item.quantity - 1)
@@ -165,8 +165,8 @@ function CartPage() {
                       </button>
                     </div>
 
-                    <div className="text-right">
-                      <span className="text-xl font-bold text-slate-900">
+                    <div className="text-center sm:text-right">
+                      <span className="text-lg sm:text-xl font-bold text-slate-900">
                         {formatPrice(item.price * item.quantity)}
                       </span>
                     </div>
@@ -176,10 +176,10 @@ function CartPage() {
             </div>
           ))}
 
-          <div className="flex items-center justify-between pt-6">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-6 gap-4">
             <Link
               to="/"
-              className="inline-flex items-center px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl transition-all duration-200"
+              className="inline-flex items-center justify-center px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl transition-all duration-200"
             >
               <svg
                 className="w-5 h-5 mr-2"
@@ -198,7 +198,7 @@ function CartPage() {
             </Link>
             <button
               onClick={clearCart}
-              className="text-rose-600 hover:text-rose-700 font-medium hover:bg-rose-50 px-4 py-2 rounded-lg transition-all duration-200"
+              className="text-rose-600 hover:text-rose-700 font-medium hover:bg-rose-50 px-4 py-2 rounded-lg transition-all duration-200 text-center"
             >
               Clear Cart
             </button>
@@ -249,7 +249,7 @@ function CartPage() {
               </button>
             </div>
 
-            <div className="mt-4 flex items-center justify-center space-x-4 text-sm text-slate-500">
+            <div className="mt-4 flex flex-col space-y-3 items-center justify-center md:flex-row md:space-y-0 md:space-x-4 text-sm text-slate-500">
               <div className="flex items-center">
                 <svg
                   className="w-4 h-4 mr-1"
@@ -289,13 +289,13 @@ function CartPage() {
             <h3 className="text-lg font-semibold text-slate-900 mb-4">
               Promo Code
             </h3>
-            <div className="flex space-x-3">
+            <div className="flex-col space-y-3 md:flex md:space-x-3">
               <input
                 type="text"
                 placeholder="Enter discount code"
-                className="flex-1 px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-colors"
+                className="flex-1 w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-colors"
               />
-              <button className="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-all duration-200 active:scale-95">
+              <button className="px-6 py-3 w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-all duration-200 active:scale-95">
                 Apply
               </button>
             </div>
